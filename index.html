@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!--
+   ______                            __
+  / ____/___  ____ ___  ____  __  __/ /____  _____
+ / /   / __ \/ __ `__ \/ __ \/ / / / __/ _ \/ ___/
+/ /___/ /_/ / / / / / / /_/ / /_/ / /_/  __/ /
+\____/\____/_/ /_/ /_/ .___/\__,_/\__/\___/_/
+                    /_/
+        Created with Perplexity Computer
+        https://www.perplexity.ai/computer
+-->
+<meta name="generator" content="Perplexity Computer">
+<meta name="author" content="Perplexity Computer">
+<meta property="og:see_also" content="https://www.perplexity.ai/computer">
+<link rel="author" href="https://www.perplexity.ai/computer">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LESA Labs — Consultoría Tecnológica y Desarrollo Digital</title>
+<meta name="description" content="LESA Labs: Consultoría tecnológica, digitalización empresarial, automatización, y desarrollo de aplicaciones y sitios web. Especialistas en bienes raíces, administración de propiedades y sector comercial.">
+
+<!-- Open Graph -->
+<meta property="og:title" content="LESA Labs — Consultoría Tecnológica y Desarrollo Digital">
+<meta property="og:description" content="Transformamos negocios a través de soluciones digitales innovadoras. Especialistas en bienes raíces y sector comercial.">
+<meta property="og:type" content="website">
+
+<!-- Fonts -->
+<link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700,800,900&f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+<!-- GSAP for animations -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+
+<!-- Styles -->
+<link rel="stylesheet" href="./base.css">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<!-- Cursor Glow -->
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<!-- Navigation -->
+<nav class="nav" id="nav">
+  <div class="container nav__inner">
+    <a href="#" class="nav__logo">
+      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="LESA Labs Logo">
+        <rect x="2" y="2" width="32" height="32" rx="6" stroke="currentColor" stroke-width="2" fill="none"/>
+        <path d="M10 26V10h2.5v13.5H20V26H10z" fill="currentColor"/>
+        <path d="M22 10h6" stroke="#00d4ff" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M22 18h5" stroke="#00d4ff" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M22 26h6" stroke="#00d4ff" stroke-width="2.5" stroke-linecap="round"/>
+      </svg>
+      <span class="nav__logo-text">LESA<span class="nav__logo-accent"> Labs</span></span>
+    </a>
+
+    <ul class="nav__links">
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#portafolio">Portafolio</a></li>
+      <li><a href="#sectores">Sectores</a></li>
+      <li><a href="#proceso">Proceso</a></li>
+    </ul>
+
+    <a href="#contacto" class="nav__cta">Contáctanos</a>
+
+    <button class="nav__mobile-toggle" id="mobileToggle" aria-label="Abrir menú">
+      <i data-lucide="menu" style="width:24px;height:24px;"></i>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#servicios" onclick="closeMobile()">Servicios</a>
+  <a href="#portafolio" onclick="closeMobile()">Portafolio</a>
+  <a href="#sectores" onclick="closeMobile()">Sectores</a>
+  <a href="#proceso" onclick="closeMobile()">Proceso</a>
+  <a href="#contacto" onclick="closeMobile()">Contáctanos</a>
+</div>
+
+<!-- Hero -->
+<section class="hero" id="inicio">
+  <div class="hero__bg">
+    <div class="hero__grid"></div>
+    <div class="hero__glow"></div>
+    <div class="hero__glow-2"></div>
+    <canvas class="particles-canvas" id="particlesCanvas"></canvas>
+    <div class="float-element float-element--1"></div>
+    <div class="float-element float-element--2"></div>
+  </div>
+
+  <div class="container hero__content">
+    <div class="hero__badge gsap-hero">
+      <span class="hero__badge-dot"></span>
+      Consultoría Tecnológica
+    </div>
+
+    <h1 class="hero__title gsap-hero">
+      Transformamos<br>
+      tu negocio con<br>
+      <span class="hero__title-gradient">soluciones digitales</span>
+    </h1>
+
+    <p class="hero__description gsap-hero">
+      Somos una firma especializada en digitalización empresarial, automatización de procesos, y desarrollo de aplicaciones y sitios web de alto impacto.
+    </p>
+
+    <div class="hero__actions gsap-hero">
+      <a href="#portafolio" class="btn btn--primary">
+        Ver portafolio
+        <i data-lucide="arrow-right" style="width:16px;height:16px;"></i>
+      </a>
+      <a href="#contacto" class="btn btn--outline">
+        Hablar con un experto
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Stats -->
+<section class="stats">
+  <div class="container stats__inner">
+    <div class="stat reveal">
+      <div class="stat__number" data-count="50">0+</div>
+      <div class="stat__label">Proyectos entregados</div>
+    </div>
+    <div class="stat reveal reveal-delay-1">
+      <div class="stat__number" data-count="5">0+</div>
+      <div class="stat__label">Años de experiencia</div>
+    </div>
+    <div class="stat reveal reveal-delay-2">
+      <div class="stat__number" data-count="30">0+</div>
+      <div class="stat__label">Clientes activos</div>
+    </div>
+    <div class="stat reveal reveal-delay-3">
+      <div class="stat__number" data-count="6">0+</div>
+      <div class="stat__label">Sectores atendidos</div>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section class="services section" id="servicios">
+  <div class="container">
+    <div class="section__header reveal">
+      <span class="section__label">Nuestros servicios</span>
+      <h2 class="section__title">Soluciones integrales para tu empresa</h2>
+      <p class="section__subtitle">
+        Desde la estrategia digital hasta la implementación técnica, cubrimos cada etapa de la transformación.
+      </p>
+    </div>
+
+    <div class="services__grid">
+      <div class="service-card">
+        <div class="service-card__icon">
+          <i data-lucide="monitor-smartphone" style="width:24px;height:24px;"></i>
+        </div>
+        <h3 class="service-card__title">Digitalización Empresarial</h3>
+        <p class="service-card__text">Transformamos procesos analógicos en flujos digitales eficientes. Migramos tu operación al ecosistema digital.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-card__icon">
+          <i data-lucide="zap" style="width:24px;height:24px;"></i>
+        </div>
+        <h3 class="service-card__title">Automatización</h3>
+        <p class="service-card__text">Eliminamos tareas repetitivas con automatizaciones inteligentes. Más eficiencia, menos errores, mayor productividad.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-card__icon">
+          <i data-lucide="app-window" style="width:24px;height:24px;"></i>
+        </div>
+        <h3 class="service-card__title">Desarrollo de Aplicaciones</h3>
+        <p class="service-card__text">Creamos aplicaciones web y móviles a medida que resuelven problemas reales de tu negocio y tus clientes.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-card__icon">
+          <i data-lucide="globe" style="width:24px;height:24px;"></i>
+        </div>
+        <h3 class="service-card__title">Desarrollo Web</h3>
+        <p class="service-card__text">Sitios web de alto impacto visual y rendimiento técnico. Diseño premium que genera resultados medibles.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Portfolio — THE HIGHLIGHT -->
+<section class="portfolio section" id="portafolio">
+  <div class="container">
+    <div class="section__header reveal">
+      <span class="section__label">Nuestro portafolio</span>
+      <h2 class="section__title">Proyectos que hablan por sí solos</h2>
+      <p class="section__subtitle">
+        Cada proyecto es una historia de transformación digital. Conoce los resultados que hemos logrado.
+      </p>
+    </div>
+
+    <div class="portfolio__grid">
+
+      <!-- Featured: Grupo Gryon -->
+      <div class="portfolio-card portfolio-card--featured">
+        <div class="portfolio-card__image">
+          <img src="./assets/grupo-gryon.png" alt="Grupo Gryon - Desarrollo inmobiliario premium" loading="lazy">
+          <div class="portfolio-card__overlay">
+            <a href="https://grupogryon.com/" target="_blank" rel="noopener noreferrer" class="portfolio-card__overlay-link">
+              Visitar sitio <i data-lucide="external-link" style="width:14px;height:14px;"></i>
+            </a>
+          </div>
+        </div>
+        <div class="portfolio-card__info">
+          <span class="portfolio-card__badge">Bienes Raíces</span>
+          <h3 class="portfolio-card__title">Grupo Gryon</h3>
+          <p class="portfolio-card__description">Sitio web premium para desarrolladora inmobiliaria líder. Diseño editorial con experiencia de navegación inmersiva que refleja la innovación y calidad de sus proyectos arquitectónicos.</p>
+          <div class="portfolio-card__tags">
+            <span class="portfolio-card__tag">Diseño Web</span>
+            <span class="portfolio-card__tag">UX/UI</span>
+            <span class="portfolio-card__tag">Inmobiliario</span>
+            <span class="portfolio-card__tag">Animaciones</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Baala Cancún -->
+      <div class="portfolio-card">
+        <div class="portfolio-card__image">
+          <img src="./assets/baala-cancun.png" alt="Baala Cancún - Proyecto residencial de lujo" loading="lazy">
+          <div class="portfolio-card__overlay">
+            <a href="https://www.baalacancun.com/" target="_blank" rel="noopener noreferrer" class="portfolio-card__overlay-link">
+              Visitar sitio <i data-lucide="external-link" style="width:14px;height:14px;"></i>
+            </a>
+          </div>
+        </div>
+        <div class="portfolio-card__info">
+          <span class="portfolio-card__badge">Bienes Raíces</span>
+          <h3 class="portfolio-card__title">Baala Cancún</h3>
+          <p class="portfolio-card__description">Plataforma digital para proyecto residencial de lujo en Cancún. Experiencia visual cinematográfica que captura la esencia del desarrollo.</p>
+          <div class="portfolio-card__tags">
+            <span class="portfolio-card__tag">Diseño Web</span>
+            <span class="portfolio-card__tag">Residencial</span>
+            <span class="portfolio-card__tag">Lujo</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Nikki Ocean -->
+      <div class="portfolio-card">
+        <div class="portfolio-card__image">
+          <img src="./assets/nikki-ocean.png" alt="Nikki Ocean - Desarrollo costero exclusivo" loading="lazy">
+          <div class="portfolio-card__overlay">
+            <a href="https://www.nikkiocean.com/" target="_blank" rel="noopener noreferrer" class="portfolio-card__overlay-link">
+              Visitar sitio <i data-lucide="external-link" style="width:14px;height:14px;"></i>
+            </a>
+          </div>
+        </div>
+        <div class="portfolio-card__info">
+          <span class="portfolio-card__badge">Bienes Raíces</span>
+          <h3 class="portfolio-card__title">Nikki Ocean</h3>
+          <p class="portfolio-card__description">Sitio web para desarrollo costero exclusivo. Diseño premium que transmite elegancia y estilo de vida oceanfront.</p>
+          <div class="portfolio-card__tags">
+            <span class="portfolio-card__tag">Diseño Web</span>
+            <span class="portfolio-card__tag">Costero</span>
+            <span class="portfolio-card__tag">Premium</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Abre Desarrollos -->
+      <div class="portfolio-card">
+        <div class="portfolio-card__image">
+          <img src="./assets/abre-desarrollos.png" alt="Abre Desarrollos - Desarrolladora inmobiliaria" loading="lazy">
+          <div class="portfolio-card__overlay">
+            <a href="https://abre-desarrollos.com/" target="_blank" rel="noopener noreferrer" class="portfolio-card__overlay-link">
+              Visitar sitio <i data-lucide="external-link" style="width:14px;height:14px;"></i>
+            </a>
+          </div>
+        </div>
+        <div class="portfolio-card__info">
+          <span class="portfolio-card__badge">Bienes Raíces</span>
+          <h3 class="portfolio-card__title">Abre Desarrollos</h3>
+          <p class="portfolio-card__description">Portal web para desarrolladora con presencia en el sureste mexicano. Interfaz moderna que integra video y experiencia inmersiva de sus proyectos.</p>
+          <div class="portfolio-card__tags">
+            <span class="portfolio-card__tag">Diseño Web</span>
+            <span class="portfolio-card__tag">Video</span>
+            <span class="portfolio-card__tag">Inmobiliario</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mr. Wuuf Hotel -->
+      <div class="portfolio-card">
+        <div class="portfolio-card__image">
+          <img src="./assets/mr-wuuf.png" alt="Mr. Wuuf Hotel - Aplicación de hotel para mascotas" loading="lazy">
+          <div class="portfolio-card__overlay">
+            <a href="https://www.mrwuufhotel.com/" target="_blank" rel="noopener noreferrer" class="portfolio-card__overlay-link">
+              Visitar sitio <i data-lucide="external-link" style="width:14px;height:14px;"></i>
+            </a>
+          </div>
+        </div>
+        <div class="portfolio-card__info">
+          <span class="portfolio-card__badge portfolio-card__badge--app">Aplicación</span>
+          <h3 class="portfolio-card__title">Mr. Wuuf Hotel</h3>
+          <p class="portfolio-card__description">Plataforma digital para hotel de mascotas con sistema de reservaciones, galería y gestión de servicios. Diseño cálido y funcional.</p>
+          <div class="portfolio-card__tags">
+            <span class="portfolio-card__tag">Aplicación Web</span>
+            <span class="portfolio-card__tag">Reservaciones</span>
+            <span class="portfolio-card__tag">UX/UI</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Sectors -->
+<section class="sectors section" id="sectores">
+  <div class="container">
+    <div class="section__header reveal">
+      <span class="section__label">Sectores de especialización</span>
+      <h2 class="section__title">Experiencia que cruza industrias</h2>
+      <p class="section__subtitle">
+        Nuestra especialidad en bienes raíces se complementa con experiencia en múltiples sectores.
+      </p>
+    </div>
+
+    <div class="sectors__grid">
+      <div class="sector-card">
+        <div class="sector-card__icon">
+          <i data-lucide="building-2" style="width:22px;height:22px;"></i>
+        </div>
+        <div>
+          <div class="sector-card__title">Bienes Raíces</div>
+          <div class="sector-card__text">Sitios web para desarrolladoras, portales de propiedades y plataformas de inversión inmobiliaria.</div>
+        </div>
+      </div>
+
+      <div class="sector-card">
+        <div class="sector-card__icon">
+          <i data-lucide="key-round" style="width:22px;height:22px;"></i>
+        </div>
+        <div>
+          <div class="sector-card__title">Administración de Propiedades</div>
+          <div class="sector-card__text">Sistemas de gestión, portales de inquilinos y automatización de procesos inmobiliarios.</div>
+        </div>
+      </div>
+
+      <div class="sector-card">
+        <div class="sector-card__icon">
+          <i data-lucide="store" style="width:22px;height:22px;"></i>
+        </div>
+        <div>
+          <div class="sector-card__title">Comercial</div>
+          <div class="sector-card__text">E-commerce, catálogos digitales y plataformas de venta para el sector comercial.</div>
+        </div>
+      </div>
+
+      <div class="sector-card">
+        <div class="sector-card__icon">
+          <i data-lucide="heart-pulse" style="width:22px;height:22px;"></i>
+        </div>
+        <div>
+          <div class="sector-card__title">Salud y Bienestar</div>
+          <div class="sector-card__text">Plataformas de citas, portales de pacientes y sistemas de gestión para servicios de salud.</div>
+        </div>
+      </div>
+
+      <div class="sector-card">
+        <div class="sector-card__icon">
+          <i data-lucide="utensils" style="width:22px;height:22px;"></i>
+        </div>
+        <div>
+          <div class="sector-card__title">Hospitalidad y Turismo</div>
+          <div class="sector-card__text">Hoteles, restaurantes y servicios turísticos con reservaciones y experiencias digitales.</div>
+        </div>
+      </div>
+
+      <div class="sector-card">
+        <div class="sector-card__icon">
+          <i data-lucide="graduation-cap" style="width:22px;height:22px;"></i>
+        </div>
+        <div>
+          <div class="sector-card__title">Educación</div>
+          <div class="sector-card__text">Plataformas de aprendizaje, portales académicos y herramientas educativas digitales.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Process -->
+<section class="process section" id="proceso">
+  <div class="container">
+    <div class="section__header reveal">
+      <span class="section__label">Nuestro proceso</span>
+      <h2 class="section__title">De la idea al resultado</h2>
+      <p class="section__subtitle">
+        Un proceso probado que asegura calidad en cada entrega.
+      </p>
+    </div>
+
+    <div class="process__grid">
+      <div class="process-step">
+        <div class="process-step__number">01</div>
+        <h3 class="process-step__title">Descubrimiento</h3>
+        <p class="process-step__text">Entendemos tu negocio, tus objetivos y a tus usuarios para definir la estrategia correcta.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-step__number">02</div>
+        <h3 class="process-step__title">Diseño</h3>
+        <p class="process-step__text">Creamos prototipos y diseños de alto impacto visual alineados con tu marca.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-step__number">03</div>
+        <h3 class="process-step__title">Desarrollo</h3>
+        <p class="process-step__text">Construimos con tecnologías de punta, código limpio y estándares de calidad exigentes.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-step__number">04</div>
+        <h3 class="process-step__title">Lanzamiento</h3>
+        <p class="process-step__text">Desplegamos, optimizamos y damos soporte continuo para asegurar el éxito de tu proyecto.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section section" id="contacto">
+  <div class="container">
+    <div class="cta__inner reveal">
+      <div class="cta__glow"></div>
+      <h2 class="cta__title">¿Listo para transformar<br>tu presencia digital?</h2>
+      <p class="cta__text">Conversemos sobre tu próximo proyecto. Nuestro equipo está listo para convertir tu visión en realidad.</p>
+      <div style="position:relative;">
+        <a href="mailto:contacto@lesalabs.com" class="btn btn--primary" style="font-size:var(--text-base);">
+          Iniciar conversación
+          <i data-lucide="arrow-right" style="width:18px;height:18px;"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div>
+        <a href="#" class="nav__logo" style="display:inline-flex;">
+          <svg width="32" height="32" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="LESA Labs">
+            <rect x="2" y="2" width="32" height="32" rx="6" stroke="currentColor" stroke-width="2" fill="none"/>
+            <path d="M10 26V10h2.5v13.5H20V26H10z" fill="currentColor"/>
+            <path d="M22 10h6" stroke="#00d4ff" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M22 18h5" stroke="#00d4ff" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M22 26h6" stroke="#00d4ff" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+          <span class="nav__logo-text">LESA<span class="nav__logo-accent"> Labs</span></span>
+        </a>
+        <p class="footer__brand-text">Consultoría tecnológica y desarrollo digital. Transformamos negocios con soluciones innovadoras.</p>
+      </div>
+
+      <div>
+        <h4 class="footer__col-title">Servicios</h4>
+        <ul class="footer__links">
+          <li><a href="#servicios">Digitalización Empresarial</a></li>
+          <li><a href="#servicios">Automatización</a></li>
+          <li><a href="#servicios">Desarrollo de Aplicaciones</a></li>
+          <li><a href="#servicios">Desarrollo Web</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer__col-title">Empresa</h4>
+        <ul class="footer__links">
+          <li><a href="#portafolio">Portafolio</a></li>
+          <li><a href="#sectores">Sectores</a></li>
+          <li><a href="#proceso">Proceso</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <span class="footer__copy">&copy; 2026 LESA Labs. Todos los derechos reservados.</span>
+      <span class="footer__attribution">
+        <a href="https://www.perplexity.ai/computer" target="_blank" rel="noopener noreferrer">Created with Perplexity Computer</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<!-- App Script -->
+<script src="./app.js"></script>
+
+<script data-pplx-inline-edit>
+(function(){
+  if(window===window.top)return;
+  function inlineAll(orig,clone){
+    if(orig.nodeType!==1)return;
+    try{
+      var cs=getComputedStyle(orig);
+      var t='';
+      for(var i=0;i<cs.length;i++){t+=cs[i]+':'+cs.getPropertyValue(cs[i])+';';}
+      clone.style.cssText=t;
+    }catch(e){}
+    var oc=orig.children,cc=clone.children;
+    for(var j=0;j<oc.length&&j<cc.length;j++){inlineAll(oc[j],cc[j]);}
+  }
+  function stripExternal(clone){
+    var imgs=clone.querySelectorAll('img');
+    for(var i=0;i<imgs.length;i++){
+      var s=imgs[i].getAttribute('src');
+      if(s&&!s.startsWith('data:'))imgs[i].removeAttribute('src');
+    }
+    var all=clone.querySelectorAll('*');
+    for(var i=0;i<all.length;i++){
+      var st=all[i].style.cssText;
+      if(st&&st.indexOf('url(')>=0){
+        all[i].style.cssText=st.replace(/url\(["']?(?!data:)[^)"']*["']?\)/gi,'none');
+      }
+    }
+  }
+  window.addEventListener('message',function(e){
+    if(!e.data||e.data.type!=='INLINE_EDIT_CAPTURE_REQUEST')return;
+    var scrollX=window.scrollX||window.pageXOffset||0;
+    var scrollY=window.scrollY||window.pageYOffset||0;
+    var w=window.innerWidth,h=window.innerHeight;
+    try{
+      var clone=document.documentElement.cloneNode(true);
+      var rm=clone.querySelectorAll('script,link[rel="stylesheet"],style');
+      for(var i=0;i<rm.length;i++){rm[i].remove();}
+      inlineAll(document.documentElement,clone);
+      stripExternal(clone);
+      var html=new XMLSerializer().serializeToString(clone);
+      var svg='<svg xmlns="http://www.w3.org/2000/svg" width="'+w+'" height="'+h+'">'
+        +'<foreignObject width="100%" height="100%">'
+        +'<div xmlns="http://www.w3.org/1999/xhtml" style="width:'+w+'px;height:'+h+'px;overflow:hidden">'
+        +'<div style="transform:translate(-'+scrollX+'px,-'+scrollY+'px);transform-origin:top left">'
+        +html+'</div></div></foreignObject></svg>';
+      var svgUrl='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg);
+      var img=new Image();
+      img.onload=function(){
+        var c=document.createElement('canvas');c.width=w;c.height=h;
+        c.getContext('2d').drawImage(img,0,0);
+        window.parent.postMessage({type:'INLINE_EDIT_SCREENSHOT_RESULT',dataUrl:c.toDataURL('image/png'),scrollX:scrollX,scrollY:scrollY},'*');
+      };
+      img.onerror=function(){
+        window.parent.postMessage({type:'INLINE_EDIT_SCREENSHOT_RESULT',dataUrl:null,scrollX:scrollX,scrollY:scrollY},'*');
+      };
+      img.src=svgUrl;
+    }catch(err){
+      window.parent.postMessage({type:'INLINE_EDIT_SCREENSHOT_RESULT',dataUrl:null,scrollX:scrollX,scrollY:scrollY},'*');
+    }
+  });
+})();
+</script></body>
+</html>
